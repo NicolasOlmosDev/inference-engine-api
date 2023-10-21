@@ -1,10 +1,12 @@
 package com.example.apimotorinferencia.models;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 
 @Data
+@NoArgsConstructor
 public class Rule {
     static int nb = 0;
     public int nbr;
@@ -31,6 +33,6 @@ public class Rule {
     }
 
     public String toLog() {
-        return "r" + this.nbr + "--> If: " + this.premiss.toString() + " , so: " + this.action;
+        return "r" + this.nbr + "--> If: " + this.premiss.toString() + " , So: " + this.action;
     }
 }

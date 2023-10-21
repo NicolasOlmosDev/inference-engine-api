@@ -1,12 +1,19 @@
 package com.example.apimotorinferencia.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 
 @Data
+@AllArgsConstructor
 public class KnowledgeBase {
     private ArrayList<Rule> rules;
+
+    public KnowledgeBase() {
+        this.rules = new ArrayList<>();
+    }
 
     public Rule getApplicableRule(ArrayList<String> facts) throws Exception {
         Rule applicableRule = null;

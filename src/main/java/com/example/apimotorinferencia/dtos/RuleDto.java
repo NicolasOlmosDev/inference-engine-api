@@ -5,6 +5,7 @@ import lombok.Data;
 import java.util.ArrayList;
 
 @Data
-public class KnowledgeBaseDto {
-    private ArrayList<RuleDto> rules;
+public class RuleDto {
+    private ArrayList<String> premiss;
+    private String action;
 }
