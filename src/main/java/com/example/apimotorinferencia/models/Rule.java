@@ -29,4 +29,8 @@ public class Rule {
     public void deactivate() {
         this.active = false;
     }
+
+    public String toLog() {
+        return "r" + this.nbr + "--> If: " + this.premiss.toString() + " , so: " + this.action;
+    }
 }
