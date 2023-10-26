@@ -33,6 +33,6 @@ public class Rule {
     }
 
     public String toLog() {
-        return "r" + this.nbr + "--> If: " + this.premiss.toString() + " , So: " + this.action;
+        return "r" + this.nbr + "--> Si: " + this.premiss.toString() + " , Entonces: " + this.action;
     }
 }

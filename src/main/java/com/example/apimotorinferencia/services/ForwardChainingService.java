@@ -37,28 +37,28 @@ public class ForwardChainingService {
 
                 applicableRule.deactivate();
 
-                System.out.println("The applicable rule is: " + applicableRule.toLog() + "\n");
-                result.append("The applicable rule is: ").append(applicableRule.toLog()).append("\n");
+                System.out.println("La regla aplicable es: " + applicableRule.toLog() + "\n");
+                result.append("La regla aplicable es: ").append(applicableRule.toLog()).append("\n");
 
                 newRules.add(applicableRule);
 
                 facts.add(applicableRule.getAction());
-                System.out.println("Facts for this iteration: " + facts + "\n");
-                result.append("Facts for this iteration: ").append(facts).append("\n");
+                System.out.println("Hechos para esta iteración: " + facts + "\n");
+                result.append("Hechos para esta iteración: ").append(facts).append("\n");
             }
 
             if (facts.contains(query)) {
-                System.out.println("The rule: " + query + " is established");
-                result.append("The rule: ").append(query).append(" is established").append("\n");
-                System.out.println("The rules used to demonstrate {" + query + "}:");
-                result.append("The rules used to demonstrate {").append(query).append("}:").append("\n");
+                System.out.println("La regla: " + query + " está establecida");
+                result.append("La regla: ").append(query).append(" está establecida").append("\n");
+                System.out.println("Las reglas utilizadas para demostrar {" + query + "}:");
+                result.append("Las reglas utilizadas para demostrar {").append(query).append("}:").append("\n");
                 for (Rule rule : newRules) {
                     System.out.println(rule.toLog());
                     result.append(rule.toLog()).append("\n");
                 }
             } else {
-                System.out.println("The rule: " + query + " is not established");
-                result.append("The rule: ").append(query).append(" is not established").append("\n");
+                System.out.println("La regla: " + query + " no está establecida");
+                result.append("La regla: ").append(query).append(" no está establecida").append("\n");
             }
 
         } catch (Exception e) {
@@ -67,5 +67,6 @@ public class ForwardChainingService {
 
         return result.toString();
     }
+
 }
 

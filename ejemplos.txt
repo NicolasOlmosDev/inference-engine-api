@@ -1,0 +1,184 @@
+{
+  "query": "AcciónDePelículaRecomendada",
+  "facts": ["UsuarioHaIniciadoSesión", "UsuarioLeGustanPelículasDeAcción", "UsuarioLeGustanPelículasDeComedia"],
+  "knowledgeBase": {
+    "rules": [
+      {
+        "premiss": ["UsuarioHaIniciadoSesión", "UsuarioLeGustanPelículasDeAcción"],
+        "action": "AcciónDePelículaRecomendada"
+      },
+      {
+        "premiss": ["UsuarioHaIniciadoSesión", "UsuarioLeGustanPelículasDeComedia"],
+        "action": "ComediaDePelículaRecomendada"
+      },
+      {
+        "premiss": ["AcciónDePelículaRecomendada", "UsuarioTieneAmigos"],
+        "action": "PelículaRecomendadaParaVerConAmigos"
+      },
+      {
+        "premiss": ["UsuarioHaIniciadoSesión", "UsuarioLeGustanPelículasDeTerror"],
+        "action": "PelículaDeTerrorRecomendada"
+      }
+    ]
+  }
+}
+
+{
+  "query": "F",
+  "facts": ["A", "D", "E", "G"],
+  "knowledgeBase": {
+        "rules": [
+      {
+        "premiss": ["A", "B", "C"],
+        "action": "H"
+      },
+      {
+        "premiss": ["A", "U", "C"],
+        "action": "F"
+      },
+      {
+        "premiss": ["E", "G", "B"],
+        "action": "S"
+      },
+      {
+        "premiss": ["D", "G"],
+        "action": "C"
+      },
+      {
+        "premiss": ["A", "E"],
+        "action": "B"
+      },
+      {
+        "premiss": ["U", "S", "T"],
+        "action": "F"
+      },
+      {
+        "premiss": ["G", "H"],
+        "action": "R"
+      },
+      {
+        "premiss": ["D", "E"],
+        "action": "T"
+      },
+      {
+        "premiss": ["R", "S", "H"],
+        "action": "F"
+      },
+      {
+        "premiss": ["A", "U"],
+        "action": "B"
+      }
+    ]
+  }
+}
+
+{
+  "query": "H",
+  "facts": ["B", "C", "D", "E"],
+  "knowledgeBase": {
+    "rules": [
+      {
+        "premiss": ["B", "D", "E"],
+        "action": "F"
+      },
+      {
+        "premiss": ["G", "D"],
+        "action": "A"
+      },
+      {
+        "premiss": ["C", "F"],
+        "action": "A"
+      },
+      {
+        "premiss": ["B"],
+        "action": "X"
+      },
+      {
+        "premiss": ["D"],
+        "action": "E"
+      },
+      {
+        "premiss": ["X", "A"],
+        "action": "H"
+      },
+      {
+        "premiss": ["C"],
+        "action": "D"
+      },
+      {
+        "premiss": ["X", "C"],
+        "action": "A"
+      },
+      {
+        "premiss": ["X", "B"],
+        "action": "D"
+      }
+    ]
+  }
+}
+
+{
+  "query": "E",
+  "facts": ["A", "B", "D"],
+  "knowledgeBase": {
+    "rules": [
+      {
+        "premiss": ["A", "B"],
+        "action": "C"
+      },
+      {
+        "premiss": ["C", "D"],
+        "action": "E"
+      }
+    ]
+  }
+}
+
+{
+  "query": "F",
+  "facts": ["A", "D", "E", "G"],
+  "knowledgeBase": {
+    "rules": [
+      {
+        "premiss": ["A", "B", "C"],
+        "action": "H"
+      },
+      {
+        "premiss": ["A", "U", "C"],
+        "action": "F"
+      },
+      {
+        "premiss": ["E", "G", "B"],
+        "action": "S"
+      },
+      {
+        "premiss": ["D", "G"],
+        "action": "C"
+      },
+      {
+        "premiss": ["A", "E"],
+        "action": "B"
+      },
+      {
+        "premiss": ["U", "S", "T"],
+        "action": "F"
+      },
+      {
+        "premiss": ["G", "H"],
+        "action": "R"
+      },
+      {
+        "premiss": ["D", "E"],
+        "action": "T"
+      },
+      {
+        "premiss": ["R", "S", "H"],
+        "action": "F"
+      },
+      {
+        "premiss": ["A", "U"],
+        "action": "B"
+      }
+    ]
+  }
+}
