@@ -1,18 +1,18 @@
 {
-  "query": "AcciónDePelículaRecomendada",
+  "query": "PelículaDeAccionRecomendada",
   "facts": ["UsuarioHaIniciadoSesión", "UsuarioLeGustanPelículasDeAcción", "UsuarioLeGustanPelículasDeComedia"],
   "knowledgeBase": {
     "rules": [
       {
         "premiss": ["UsuarioHaIniciadoSesión", "UsuarioLeGustanPelículasDeAcción"],
-        "action": "AcciónDePelículaRecomendada"
+        "action": "PelículaDeAccionRecomendada"
       },
       {
         "premiss": ["UsuarioHaIniciadoSesión", "UsuarioLeGustanPelículasDeComedia"],
-        "action": "ComediaDePelículaRecomendada"
+        "action": "PelículaDeComediaRecomendada"
       },
       {
-        "premiss": ["AcciónDePelículaRecomendada", "UsuarioTieneAmigos"],
+        "premiss": ["PelículaDeAccionRecomendada", "UsuarioTieneAmigos"],
         "action": "PelículaRecomendadaParaVerConAmigos"
       },
       {
